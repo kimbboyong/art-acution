@@ -150,6 +150,9 @@ const def = new Map([
       ],
     },
   ],
+
+  // 3300, 4600 3300, 4600 / 3300,3900 / 4000, 4600
+
   [
     "slide3",
     {
@@ -205,6 +208,8 @@ const def = new Map([
       ],
     },
   ],
+
+  // 4
   [
     "moving-background",
     {
@@ -254,6 +259,8 @@ const def = new Map([
       ],
     },
   ],
+
+  // 4
   [
     "slide4",
     {
@@ -314,7 +321,7 @@ const def = new Map([
     {
       id: "slide5",
       top: 6100,
-      bottom: 9000,
+      bottom: 7000,
       topStyle: {
         opacity: 0,
       },
@@ -339,6 +346,61 @@ const def = new Map([
           enabled: false,
           top: 6100,
           bottom: 6700,
+          easing: ease,
+          styles: [
+            {
+              name: "opacity",
+              topValue: 0,
+              bottomValue: 1,
+            },
+          ],
+        },
+        {
+          enabled: false,
+          top: 6500,
+          bottom: 7000,
+          easing: easeIn,
+          styles: [
+            {
+              name: "opacity",
+              topValue: 1,
+              bottomValue: 0,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  [
+    "slide6",
+    {
+      id: "slide6",
+      top: 7300,
+      bottom: 10000,
+      topStyle: {
+        opacity: 0,
+      },
+      bottomStyle: {
+        opacity: 0,
+      },
+      animations: [
+        {
+          enabled: false,
+          top: 6800,
+          bottom: 10000,
+          easing: midSlow,
+          styles: [
+            {
+              name: "translateY",
+              topValue: 60,
+              bottomValue: -60,
+            },
+          ],
+        },
+        {
+          enabled: false,
+          top: 6500,
+          bottom: 11000,
           easing: ease,
           styles: [
             {
@@ -406,11 +468,13 @@ const elements = {
   "moving-background": document.getElementById("moving-background"),
   slide4: document.getElementById("slide4"),
   slide5: document.getElementById("slide5"),
+  slide6: document.getElementById("slide6"),
 };
 
 function onScroll() {
   // 현재 스크롤 위치 파악
   const scrollTop = window.scrollY || window.pageYOffset;
+  console.log(scrollTop);
   const currentPos = scrollTop + window.innerHeight / 2;
   const logoIco = document.getElementById("logoIco");
 
@@ -467,7 +531,7 @@ window.addEventListener("scroll", onScroll);
 
 function initAnimation() {
   // Sticky Conainer 의 높이를 설정함.
-  elements["sticky-container"].style.height = `7100px`;
+  elements["sticky-container"].style.height = `11000px`;
 
   // 모든 요소를 disabled 에 넣음.
   def.forEach((obj, id) => {
@@ -539,3 +603,166 @@ function applyAnimations(currentPos, id) {
     }
   });
 }
+
+// [
+//     "moving-background",
+//     {
+//       id: "moving-background",
+//       top: 4500,
+//       bottom: 5900,
+//       topStyle: {
+//         opacity: 0,
+//         translateY: 300,
+//       },
+//       bottomStyle: {
+//         opacity: 0,
+//         translateY: 0,
+//       },
+//       animations: [
+//         {
+//           enabled: false,
+//           top: 4500,
+//           bottom: 5300,
+//           easing: ease,
+//           styles: [
+//             {
+//               name: "opacity",
+//               topValue: 0,
+//               bottomValue: 1,
+//             },
+//             {
+//               name: "translateY",
+//               topValue: 200,
+//               bottomValue: 0,
+//             },
+//           ],
+//         },
+//         {
+//           enabled: false,
+//           top: 5300,
+//           bottom: 5900,
+//           easing: easeIn,
+//           styles: [
+//             {
+//               name: "opacity",
+//               topValue: 1,
+//               bottomValue: 0,
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//   ],
+
+//   // 4
+//   [
+//     "slide4",
+//     {
+//       id: "slide4",
+//       top: 4700,
+//       bottom: 6000,
+//       topStyle: {
+//         opacity: 0,
+//       },
+//       bottomStyle: {
+//         opacity: 0,
+//       },
+//       animations: [
+//         {
+//           enabled: false,
+//           top: 4700,
+//           bottom: 6000,
+//           easing: midSlow,
+//           styles: [
+//             {
+//               name: "translateY",
+//               topValue: 60,
+//               bottomValue: -60,
+//             },
+//           ],
+//         },
+//         {
+//           enabled: false,
+//           top: 4700,
+//           bottom: 5300,
+//           easing: ease,
+//           styles: [
+//             {
+//               name: "opacity",
+//               topValue: 0,
+//               bottomValue: 1,
+//             },
+//           ],
+//         },
+//         {
+//           enabled: false,
+//           top: 5400,
+//           bottom: 6000,
+//           easing: easeIn,
+//           styles: [
+//             {
+//               name: "opacity",
+//               topValue: 1,
+//               bottomValue: 0,
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//   ],
+
+// [
+//     "slide3",
+//     {
+//       id: "slide3",
+//       top: 3300,
+//       bottom: 4600,
+//       topStyle: {
+//         opacity: 0,
+//       },
+//       bottomStyle: {
+//         opacity: 0,
+//       },
+//       animations: [
+//         {
+//           enabled: false,
+//           top: 3300,
+//           bottom: 4600,
+//           easing: midSlow,
+//           styles: [
+//             {
+//               name: "translateY",
+//               topValue: 60,
+//               bottomValue: -60,
+//             },
+//           ],
+//         },
+//         {
+//           enabled: false,
+//           top: 3300,
+//           bottom: 3900,
+//           easing: ease,
+//           styles: [
+//             {
+//               name: "opacity",
+//               topValue: 0,
+//               bottomValue: 1,
+//             },
+//           ],
+//         },
+//         {
+//           enabled: false,
+//           top: 4000,
+//           bottom: 4600,
+//           easing: easeIn,
+//           styles: [
+//             {
+//               name: "opacity",
+//               topValue: 1,
+//               bottomValue: 0,
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//   ],
