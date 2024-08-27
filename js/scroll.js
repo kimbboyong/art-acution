@@ -1,5 +1,3 @@
-// @ts-check
-// @ts-ignore
 import bezierEasing from "https://cdn.skypack.dev/bezier-easing@2.1.0";
 
 const ease = bezierEasing(0.25, 0.1, 0.25, 1.0);
@@ -376,7 +374,7 @@ const def = new Map([
     {
       id: "slide6",
       top: 7300,
-      bottom: 10000,
+      bottom: 9000,
       topStyle: {
         opacity: 0,
       },
@@ -387,7 +385,7 @@ const def = new Map([
         {
           enabled: false,
           top: 6800,
-          bottom: 10000,
+          bottom: 9000,
           easing: midSlow,
           styles: [
             {
@@ -400,13 +398,26 @@ const def = new Map([
         {
           enabled: false,
           top: 6500,
-          bottom: 11000,
+          bottom: 10000,
           easing: ease,
           styles: [
             {
               name: "opacity",
               topValue: 0,
               bottomValue: 1,
+            },
+          ],
+        },
+        {
+          enabled: false,
+          top: 7000,
+          bottom: 10000,
+          easing: easeIn,
+          styles: [
+            {
+              name: "opacity",
+              topValue: 1,
+              bottomValue: 0,
             },
           ],
         },
@@ -472,9 +483,7 @@ const elements = {
 };
 
 function onScroll() {
-  // 현재 스크롤 위치 파악
   const scrollTop = window.scrollY || window.pageYOffset;
-  console.log(scrollTop);
   const currentPos = scrollTop + window.innerHeight / 2;
   const logoIco = document.getElementById("logoIco");
 
@@ -531,7 +540,7 @@ window.addEventListener("scroll", onScroll);
 
 function initAnimation() {
   // Sticky Conainer 의 높이를 설정함.
-  elements["sticky-container"].style.height = `11000px`;
+  elements["sticky-container"].style.height = `10000px`;
 
   // 모든 요소를 disabled 에 넣음.
   def.forEach((obj, id) => {

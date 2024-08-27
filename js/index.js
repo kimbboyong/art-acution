@@ -1,9 +1,9 @@
-var swiper = new Swiper(".section03 .mySwiper", {
+var swiper = new Swiper(".section04 .mySwiper", {
   autoplay: {
     delay: 2000,
   },
   pagination: {
-    el: ".section03 .swiper-pagination",
+    el: ".section04 .swiper-pagination",
     clickable: true,
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
