@@ -1,0 +1,628 @@
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff")
+    format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Black";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+    format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* ================================================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Pretendard-Regular";
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+em {
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navWrap {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.py-8 {
+  padding: 8rem 0;
+}
+
+.bg-black {
+  background: #333;
+}
+.bg-black-50 {
+  background: #242528;
+}
+.bg-white {
+  background: #fff;
+}
+.bg-beige {
+  background: #f4f3ed;
+}
+.bg-puple {
+  background: #5a2d7e;
+}
+.bg-green {
+  background: #37b18a;
+}
+.bg-orange {
+  background: #e55a30;
+}
+
+.text-puple {
+  color: #5a2d7e;
+}
+.text-white {
+  color: #fff;
+}
+
+.hrefBtn {
+  max-width: 15rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.hrefBtn a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.hrefBtn a::after {
+  content: "";
+  display: block;
+  background: url(../images/ico-arrow.svg) no-repeat center;
+  background-size: contain;
+  width: 5px;
+  height: 12px;
+}
+
+.hrefBtn:hover {
+  opacity: 0.8;
+}
+
+.common-title {
+  text-align: center;
+}
+
+.title h3 {
+  font-size: 3rem;
+  line-height: 1.3;
+}
+.subTitle {
+  margin-bottom: 20px;
+}
+
+.subTitle h6 {
+  font-family: "Pretendard-Bold";
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.common-content {
+  margin-top: 30px;
+}
+
+.common-content p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* header */
+
+/* ================================================== */
+
+header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: #fff;
+}
+
+nav {
+  border-bottom: 1px solid #eee;
+  height: 100%;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.menuList {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menuList li:hover span {
+  color: #aa50f4;
+}
+
+.menuList span {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+/* main */
+
+/* ================================================== */
+
+section {
+  position: relative;
+}
+
+.section01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+  height: 70vh;
+}
+
+.section01 .text h2 {
+  font-size: 4.5rem;
+  margin-bottom: 3rem;
+}
+
+.section01 .text p {
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.scrollDownBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20px;
+  z-index: 1;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.scrollDownBtn svg {
+  transform: rotate(90deg);
+  transition: all 0.4s ease;
+}
+
+.scrollDownBtn span {
+  font-size: 1.4rem;
+}
+
+.scrollDownBtn:hover {
+  width: 130px;
+  height: 130px;
+}
+
+.scrollDownBtn:hover svg {
+  transform: translateY(20px) rotate(90deg);
+}
+
+.section02 {
+  z-index: 2;
+}
+
+.userCommentList {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.userCommentList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userCommentList li:nth-child(even) {
+  justify-content: end;
+  flex-direction: row-reverse;
+}
+
+.userImg {
+  width: 50px;
+  height: 50px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.userComment {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  height: 60px;
+  position: relative;
+  flex: 0.6;
+}
+
+.userComment span {
+  font-size: 1.5rem;
+  color: #fff;
+  word-break: keep-all;
+}
+
+/* section03  */
+.section03 .common-title {
+  padding-bottom: 15rem;
+  border-bottom: 1px solid #eee;
+}
+
+.swiperContainer {
+  margin-top: 15rem;
+}
+
+.moreContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 50px;
+}
+
+.moreContent span {
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.moreContent span:nth-child(2) {
+  opacity: 0.8;
+}
+.moreContent span:nth-child(3) {
+  opacity: 0.5;
+}
+
+.section03 .swiper-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section03 .slideImg {
+  max-width: 35rem;
+}
+
+.section03 .slideText {
+  flex: 0.9;
+}
+
+.section03 .slideText h6 {
+  font-family: "Pretendard-ExtraBold";
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.section03 .slideText p {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.section03 .swiper-pagination {
+  width: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.section03 .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  font-family: "Pretendard-Regular";
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #5a2d7e;
+  background: #fff;
+  border: 1px solid #5a2d7e;
+  opacity: 1;
+}
+
+.section03 .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #5a2d7e;
+}
+
+/* section04 */
+
+.section04 .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.gridContainer {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.gridItem {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.gridText {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.gridTitle {
+  margin-bottom: 1.5rem;
+}
+
+.gridTitle h6 {
+  font-family: "Pretendard-Bold";
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.gridContent p {
+  font-size: 1.7rem;
+}
+
+.section04 .gridImg {
+  height: 15rem;
+  overflow: hidden;
+}
+
+.section04 .gridImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.scrollTopBtn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 30px;
+  right: 30px;
+  z-index: 5;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: -2px 0px 12px rgba(0, 0, 0, 0.3);
+  transform: rotate(-90deg);
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.scrollTopBtn:hover {
+  opacity: 1;
+}
+/* footer */
+footer {
+  padding: 10rem 0;
+}
+
+.footerTitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.footerTitle strong {
+  font-size: 1.6rem;
+}
+
+.footerTitle a {
+  font-family: "Pretendard-Bold";
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.footerlist {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footerlist span {
+  font-size: 1.4rem;
+  color: #999;
+}
+
+.copy {
+  font-size: 1.3rem;
+  color: #999;
+}
+
+#sticky-container {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(233, 233, 233, 1) 37%,
+    rgba(255, 255, 255, 1) 81%
+  );
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.slide-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  display: none;
+  z-index: 0;
+}
+
+.slide.enabled {
+  display: block;
+}
+
+.slide-big-text p {
+  margin: 0;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 1.35;
+  letter-spacing: -1.5px;
+  word-spacing: 1.5px;
+  text-align: center;
+}
+
+.slide-small-text {
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.slide-small-text p {
+  font-size: 18px;
+  margin: 0;
+}
+
+#scroll-down {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 50rem;
+}
+
+#scroll-down span {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  animation: downMotion 0.4s linear 0s infinite alternate;
+}
+
+#moving-background {
+  color: #777;
+  z-index: -1;
+}
+
+@keyframes downMotion {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
