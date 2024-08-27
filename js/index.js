@@ -22,27 +22,3 @@ function handleScrollTop() {
     })
   );
 }
-
-// var swiper = new Swiper(".section04 .mySwiper", {
-//   slidesPerView: "auto",
-//   spaceBetween: 30,
-//   centeredSlides: true,
-//   pagination: {
-//     el: ".section04 .swiper-pagination",
-//     clickable: true,
-//   },
-// });
-
-// handleScrollTo();
-
-// function handleScrollTo() {
-//   const downText = document.querySelector(".scrollDownBtn");
-//   downText.addEventListener("click", function () {
-
-//     window.scrollTo(0, 870);
-//   });
-// }
-
-// window.addEventListener("scroll", function () {
-//   console.log(window.scrollY);
-// });

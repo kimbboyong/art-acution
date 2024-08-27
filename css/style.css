@@ -92,6 +92,15 @@ img {
   height: auto;
 }
 
+#logoIco {
+  transition: all 0.4s ease;
+}
+
+#logoIco.on .logoPath {
+  fill: #333;
+  transition: all 0.4s ease;
+}
+
 .navWrap {
   width: 100%;
   max-width: 1400px;
@@ -203,11 +212,9 @@ header {
   top: 0;
   left: 0;
   z-index: 3;
-  background: #fff;
 }
 
 nav {
-  border-bottom: 1px solid #eee;
   height: 100%;
 }
 

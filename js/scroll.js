@@ -412,7 +412,13 @@ function onScroll() {
   // 현재 스크롤 위치 파악
   const scrollTop = window.scrollY || window.pageYOffset;
   const currentPos = scrollTop + window.innerHeight / 2;
+  const logoIco = document.getElementById("logoIco");
 
+  if (scrollTop) {
+    logoIco?.classList.add("on");
+  } else {
+    logoIco?.classList.remove("on");
+  }
   // disabled 순회하며 활성화할 요소 찾기.
   disabled.forEach((obj, id) => {
     // 만약 칸에 있다면 해당 요소 활성화
