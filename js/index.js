@@ -2,6 +2,7 @@ var swiper = new Swiper(".section04 .mySwiper", {
   autoplay: {
     delay: 2000,
   },
+  loop: true,
   pagination: {
     el: ".section04 .swiper-pagination",
     clickable: true,
@@ -11,8 +12,9 @@ var swiper = new Swiper(".section04 .mySwiper", {
   },
 });
 var swiper = new Swiper(".sectionNews .mySwiper", {
-  slidesPerView: 3,
+  slidesPerView: 3.2,
   spaceBetween: 10,
+  loop: true,
   autoplay: {
     delay: 2000,
   },
