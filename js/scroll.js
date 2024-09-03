@@ -398,7 +398,7 @@ const def = new Map([
         {
           enabled: false,
           top: 6500,
-          bottom: 10000,
+          bottom: 9500,
           easing: ease,
           styles: [
             {
@@ -411,7 +411,7 @@ const def = new Map([
         {
           enabled: false,
           top: 7000,
-          bottom: 10000,
+          bottom: 9500,
           easing: easeIn,
           styles: [
             {
@@ -540,7 +540,7 @@ window.addEventListener("scroll", onScroll);
 
 function initAnimation() {
   // Sticky Conainer 의 높이를 설정함.
-  elements["sticky-container"].style.height = `10000px`;
+  elements["sticky-container"].style.height = `9500px`;
 
   // 모든 요소를 disabled 에 넣음.
   def.forEach((obj, id) => {
